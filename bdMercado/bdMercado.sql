@@ -32,6 +32,15 @@ INSERT INTO tbProdutoLi1(nomeProdutoLi1, qtdeProdutoLi1, idProdutoLi1)
 
 
 
- --INSERT INTO tbProdutoLi2(nomeProdutoLi2, qtdeProdutoLi2, idProdutoLi2)
+ INSERT INTO tbProdutoLi2(nomeProdutoLi2, qtdeProdutoLi2, idProdutoLi2)
+ VALUES
+ ('Leite', '20', '1')
+ ,('Cartela de Ovos','50','2')
+ ,('cafe', '10', '3')
+
+
   
 SELECT * FROM tbProdutoLi1
+SELECT * FROM tbProdutoLi2
+
+

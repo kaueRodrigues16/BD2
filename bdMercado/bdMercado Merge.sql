@@ -1,17 +1,18 @@
 USE bdMercado
 
-MERGE TBprodutos dest
-USING tbprodutosLi1 ori
-ON ori.idProdutos = dest.idroduto
+MERGE tbProdutos dest
+USING tbProdutoLi1 ori
+ON ori.idProdutos = dest.idProdutos
 WHEN NOT MATCHED THEN
-INSERT values (ori.idProdto, ori.nomeProduto, ori.precoProduto, ori.qtde)
+INSERT values (ori.idProduto, ori.nomeProduto, ori.precoProduto, ori.qtde)
 WHEN MATCHED THEN
-update SET dest.qtd += ori.qtde;
+ UPDATE SET dest.qtde += ori.qtde;
 
-MERGE TBprodutos dest
-USING tbprodutosLi2 ori
-ON ori.idProdutos = dest.idroduto
+MERGE tbProdutos dest
+USING tbProdutoLi1 ori
+ON ori.idProduto = dest.idProduto
 WHEN NOT MATCHED THEN
-INSERT values (ori.idProdto, ori.nomeProduto, ori.precoProduto, ori.qtde)
+INSERT values (ori.idProduto, ori.nomeProduto, ori.precoProduto, ori.qtde)
 WHEN MATCHED THEN
-update SET dest.qtd += ori.qtde;
+UPDATE SET dest.qtde += ori.qtde;
+
